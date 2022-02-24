@@ -1,0 +1,45 @@
+<div class="welcome-head">
+    <h2 class="me-4">WELCOME, {{{email}}}</h2>
+    <svg width="450" height="4" viewBox="0 0 307 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M307 1H0V0H307V1Z" fill="black"/></svg>
+</div>
+
+
+<div class="all-stats">
+    {{!-- replaced 'Word' with 'Phrase' for clarity, and increased paramater for text success from 5 seconds to 30 seconds. --}}
+    <div class="all-head">
+      <p class="lead">Type The Given Phrase Within
+      <span class="text-success" id="seconds">30</span> Seconds:</p>
+    </div>
+    <div class="typing-box" id="quoteDisplay"></div>
+</div>
+<div class="input-section">
+      <input type="text" id="quoteInput" class="typing-box form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>
+      <div class="timer" id="timer"></div>
+      <h4 class="mt-3" id="message"></h4>
+</div>
+<div class="button-section">
+  <a class="nav-link bg-dark" id="restart" href="/dashboard">RESTART</a>
+  <a class="nav-link bg-dark" id="instructions">INSTRUCTIONS</a>
+</div>
+
+<!-- Instructions -->
+<div class="row mt-5">
+  <div class="instructions hide">
+    <div class="card card-body bg-dark text-white">
+    <div id="instructions-box">
+      <div class="instruction-top">
+      <h5>Instructions</h5>
+      <a id="instruction-close">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M512 0Q373 0 255 68.5T68.5 255T0 512t68.5 257T255 955.5t257 68.5t257-68.5T955.5 769t68.5-257t-68.5-257T769 68.5T512 0zm0 961q-73 0-141.5-22.5T247 874t-96.5-97t-64-123.5T64 512q0-91 35.5-174T195 195t143-95.5T512 64t174 35.5T829 195t95.5 143T960 512t-35.5 174T829 829.5t-143 96T512 961zm181-630q-9-9-22.5-9t-22.5 9L512 467L376 331q-9-9-22.5-9t-22.5 9t-9 22.5t9 22.5l136 136l-136 136q-6 6-8.5 14t0 16.5T331 693q9 9 22.5 9t22.5-9l136-136l136 136q9 9 22.5 9t22.5-9q6-6 8.5-14.5t0-16.5t-8.5-14L557 512l136-136q9-9 9-22.5t-9-22.5z" fill="currentColor"/></svg> 
+      </a>
+      </div>
+      <p>To score, type each phrase in a given time. To play again, correctly type the current phrase. If you would like to restart, you can simply click on the "RESTART" button.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="/js/homescript.js"></script>

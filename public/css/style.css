@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+.hero {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    background-color: #131314;
+}
+/* .hero::before {
+    content:"";
+    position: absolute; z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(80, 80, 80, 0.1);
+} */
+.navbar {
+    padding-top: 0;
+}
+.nav-container{
+    padding: 10px 10px;
+}
+.site-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.site-title h1 {
+    padding-left: 6px;
+}
+/* Signup */
+.signup-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 8em;
+    color: #000;
+}
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 600px;
+    background-color:#fff;
+    border-radius: 3px;
+    padding: 2em 0;
+}
+.signup-form h1 {
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.signup-form h2 {
+    font-size: 20px;
+    color: #3E3E3E;
+    line-height: unset;
+}
+.signup-form h3 {
+    font-size: 32px;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.signup-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup-foot{
+    display: flex;
+    justify-content: center;
+}
+.signup-foot a {
+    font-size: 20px;
+    color: #3E3E3E;
+    margin-left: .5em;
+}
+/* Login */
+.login-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 8em;
+    color: #000;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 600px;
+    background-color:#fff;
+    border-radius: 3px;
+    padding: 2em 0;
+}
+.login-form h1 {
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login-form h2 {
+    font-size: 20px;
+    color: #3E3E3E;
+    line-height: unset;
+}
+.login-form h3 {
+    font-size: 32px;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.login-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-foot{
+    display: flex;
+    justify-content: center;
+}
+.login-foot a {
+    font-size: 20px;
+    color: #3E3E3E;
+    margin-left: .5em;
+}
+.int-area {
+    width: 300px; position: relative;
+    margin-top: 20px;
+}
+.int-area input {
+    width: 100%;
+    position: relative;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; 
+    color: #000;
+    outline: none;
+}
+.int-area label {
+    position: absolute; left: 10px; top: 15px;
+    font-size: 18px; 
+    color: #000;
+    transition: all .5s ease;
+}
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: 0;
+    font-size: 13px; 
+    color: #166cea;
+}
+.btn-area {
+    margin-top: 30px;
+}
+.btn-area button:hover {
+    background-color: #000000d3;
+}
+.btn-area button {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0 , 0);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 2em;
+}
+.caption {
+    margin-top: 20px;
+    text-align: center;
+}
+.caption a {
+    font-size: 15px;
+    color: #999;
+    text-decoration: none;
+
+}
+
+.header-form h4 {
+    display: flex;
+    justify-content: center;
+    transition-property: all;
+    margin-bottom:200px;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    /* animation: text 3s 1; */
+}
+
+.login-area {
+    background: #000000;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    text-decoration: none;
+    align-items: center;
+}
+a.btn {
+    color: #FFF !important;
+}
+.button {
+    z-index:2;
+    margin:40px;
+    font-size: 20px;
+    background-color: rgba(0, 0 , 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.button:hover {
+    background:#000000d3;
+}
+
+@keyframes text {
+    0%{
+        color:black;
+        margin-bottom: -50px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .int-area {
+        width: 240px;
+    }
+    .btn-area {
+        margin: 0 0 2em 0;
+    }
+    .svg-bar {
+        width: 280px;
+    }
+    /* Signup */
+    .signup-form {
+        width: 300px;
+        height: 400px;
+    }
+    .signup-form h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .signup-form h2 {
+        font-size: 13px;
+        color: #3E3E3E;
+    }
+    .signup-foot a {
+        font-size: 13px;
+        color: #3E3E3E;
+        margin-left: .2em;
+    }
+    /* Login */
+    .login-form {
+        width: 300px;
+        height: 400px;
+    }
+    .login-form h1 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .login-form h2 {
+        font-size: 13px;
+        color: #3E3E3E;
+    }
+    .login-foot a {
+        font-size: 13px;
+        color: #3E3E3E;
+        margin-left: .2em;
+    }
+}
