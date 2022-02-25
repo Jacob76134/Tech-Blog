@@ -1,64 +1,73 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const {Post, User, Comment} = require('../models')
+const withAuth = require("../utils/auth")
 
-
-router.get("/dashboard", async (req, res) => {
+router.get("/", async (req, res) => {
+  console.log(req.session);
   try {
-    const userData = await User.findOne ({
-      attributes: { exclude: ["password"] },
-     where: {email:req.session.email}
+    const postData = await Post.findAll({
+      attributes: { exclude: ["user_id"] },
+      include: [
+        { model: User, 
+          attributes: { exclude: ["password"] } },
+        {
+          model: Comment,
+          include: [
+            { model: User, 
+              attributes: { exclude: ["password"] } }],
+        },
+      ],
     });
-    if (!userData) {
-      res.status(500).json({ message: "Could not find user" });
-      return;
+
+    if (!postData) {
+      res.json("No posts created yet");
     }
 
-    const user = userData.get({ plain: true });
-
-    res.render("dashboard", {
-      ...user,
-      loggedIn: true,
-      dashboard: true,
+    const posts = postData.map((post) => post.get({ plain: true }));
+    res.render("homepage", {
+      posts,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
+router.get("/post/:id", async (req, res) => {
+  console.log(req.session);
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      attributes: { exclude: ["user_id"] },
+      include: [
+        { model: User, attributes: { exclude: ["password"] } },
+        {
+          model: Comment,
+          include: [{ model: User, attributes: { exclude: ["password"] } }],
+        },
+      ],
+    });
 
-router.get("/signup", (req, res) => {
-  
-  // if (req.session.loggedIn) {
-  //   res.redirect("/dashboard");
-  // } else {
-  //   res.redirect("signup")
-  // };
-  res.render("signup");
+    if (!postData) {
+      res.status(404).json("No posts found with this ID!");
+    }
+    const post = postData.get({ plain: true });
+    console.log(postData)
+    res.render("single-post", {
+      ...post,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("/login",  (req, res) => {
-  //LEAVE THIS CODE FOR LATER USE//
-  // if (req.session.loggedIn) {
-  //   res.redirect("/dashboard");
-  // }
-  // else {
     res.render("login");
-  // }
-  
 });
 
-router.get("/logout",  (req, res) => {
-  
-  if (req.session.loggedIn) {
-    res.redirect("/login");
-    return;
-  }
- 
-    res.render("/login");
-
-});
-
-router.get("/", (req, res) => {
+router.get("/signup", (req, res) => {
   
   res.render("signup");
 });

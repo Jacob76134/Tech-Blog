@@ -1,14 +1,19 @@
-<section class="header-form">
-    <h4>READY, WARRIOR?</h4>
+{{#each posts as |post| }}
 
- <div class="button-container">
-    <div class="button">
-      <a href="/signup" type="button" class="btn">Sign Up</a>
-    </div>
-    <div class="button">
-      <a href="/login" type="button" class="btn">Login</a>
+<div class="all-posts">
+<a href="/post/{{post.id}}">
+  <div class="blog-post bg-dark">
+    <div class="post-content">
+      <div class="post-head">
+        <h1>{{post.title}}</h1>
+        <h2>{{post.user.username}} {{format_date date_created}}</h2>
+      </div>
+      <div class="post-body">
+        <p>{{post.body}}</p>
+      </div>
     </div>
   </div>
-</section>
+</a>
+</div>
 
-
+{{/each}}

@@ -23,6 +23,8 @@
 }
 .nav-container{
     padding: 10px 10px;
+    width: 85%;
+    margin: 0 auto;
 }
 .site-title {
     display: flex;
@@ -232,6 +234,58 @@ a.btn {
 }
 .button:hover {
     background:#000000d3;
+}
+
+/* POST STYLES */
+.all-posts {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+}
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 3px; 
+    color: #fff;
+}
+.post-content {
+    width: 85%;
+    margin: 0 auto;
+}
+.post-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-body {
+    background: #000;
+    width: 85%;
+    margin: 0 auto;
+    color: white;
+}
+
+.comment-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-post {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.new-post textarea {
+    width: 60%;
+    margin-top: 3rem;
+}
+.content-form {
+    display: flex;
+    align-items: center;
 }
 
 @keyframes text {

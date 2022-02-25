@@ -1,0 +1,46 @@
+<div class="all-posts">
+<a href="/post/{{id}}">
+  <div class="blog-post bg-dark">
+    <div class="post-content">
+      <div class="post-head">
+        <h1>{{title}}</h1>
+        <h2>{{user.email}} {{format_date date_created}}</h2>
+      </div>
+      <div class="post-body">
+        <p>{{body}}</p>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+
+{{#each comments as |comment|}}
+
+  <div class="comment-container">
+    <div class="comment">
+    <div class="comment-body">
+      <div class="body">
+        <p>{{comment.body}}</p>
+        <p>-{{comment.user.email}}, {{format_date comment.date_created}}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+{{/each}}
+
+{{#if loggedIn}}
+
+  <form data-id="{{id}}" class="comment-form">
+    <div class="comment-container">
+      <div class="card-body">
+        <header>Comment</header>
+        <textarea rows="3" name="comment-content" id="input-comment"></textarea>
+        <button type="submit" class="submit-button button">Post Comment</button>
+      </div>
+    </div>
+  </form>
+
+{{/if}}
+
+<script src="/js/comment.js"></script>

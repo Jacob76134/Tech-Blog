@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Default app",
+      "body": "An appp everyone has, because it is the default one ",
+        "user_id": 1
+    },
+    {
+      "title": "Find your Wine",
+      "body": "An amazing app that searches github users, and more!",
+        "user_id": 2
+    },
+    {
+      "title": "Blockhead 3d",
+      "body": "A game where you can never truly win!",
+        "user_id": 3
+    }
+  ]
