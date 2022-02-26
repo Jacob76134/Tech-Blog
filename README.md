@@ -1,18 +1,17 @@
-# Typing-Warrior
-
+# Tech Blog
+![license badge](https://img.shields.io/github/license/jacob76134/tech-blog)
 ## Description
-This application is an app that will allow user to test type and find out how fast one types in a given amount of time. We designed typing quotes using API and JS that presents a simple typing challenge and finds the performance of typing by WPS(Words Per Second).
-
+A site that features a sequelize and the MVC layout to create a place for users to log in and talk about tech
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [License](#license)
+- [Questions](#questions)
+- [Tests](#tests)
 ## Installation
-Node.js, npm and Mysql must be installed to use this application.
-
-## Demo
-* [screenshot](./public/assets/screenshot.png)
-
-## Links
-* [Heroku](https://afternoon-reaches-65972.herokuapp.com/)
-* [Github](https://github.com/wl0194)
-
+npm i
 ## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+MIT
+## Questions
+[jacob76134](https://github.com/jacob76134)
+[jacobbrewerrooney@gmail.com](mailto:jacobbrewerrooney@gmail.com)
